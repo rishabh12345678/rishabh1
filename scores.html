@@ -1,0 +1,49 @@
+<html>
+<a href="gamelayout.html"><button type="button" class="start">START</button></a>
+<h1> <u>MATHS QUIZ</u> </h1>
+<h2> Top Scores </h2><br><br>
+<table>
+<tr>
+<td>Username</td><td>Score</td>
+</tr>
+</table>
+<p id="u1">Score</p>
+<p id="u2">score0</p>
+<p id="u3"> score1</p>
+
+
+
+<body>
+<style>
+.start{
+    background-color:#F0FFFF;
+	        border-radius:5px/5px;
+	        color:#333;
+	        display:inline-block;
+	        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+            font-size:18px;
+            padding-bottom:20px;
+            text-align:left;
+            margin-top:0.5px;
+            margin-bottom: 20px;
+}
+h1{
+    text-align:center;
+   font-size:50px;
+   margin-top:30px;
+}
+h2{
+    text-align:center;
+   font-size:30px;
+   margin-top:20px;
+}
+</style>
+<script>
+var score0=localStorage.getItem(score0);
+document.getElementById("u1").innerHTML=score0.value;
+var score1=localStorage.getItem(score1);
+document.getElementById("u1").innerHTML=score1.value;
+var score2=localStorage.getItem(score2);
+document.getElementById("u1").innerHTML=score2.value;
+</script>
+
