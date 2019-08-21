@@ -1,10 +1,10 @@
 <html>
 	<h2><u>LogIn</u></h2>
 <body>
-<form id="loginpage1" method="GET" action="start.html">
+<form id="logInform" method="GET">
 Username:<br><input type="Username" id="u1" class="input" placeholder="Username" ><br>
-Password:<br><input type="Password" id="p1" class="input" placeholder="Password" ><br>
-<input type="submit" class="LogInbutton" value="LogIn" id="log"  onkeyup="applycheck()">
+Password:<br><input type="Password" id="p1" class="input" placeholder="Password" onkeyup="validateFunction()"><br>
+<a href="start.html"><input type="submit" class="LogInbutton" value="LogIn" id="log" disabled ></a>
 <p> New User? <a href="register.html"> Register </a> </p>
 </form>
 <style>
@@ -50,22 +50,18 @@ body{
 }
 </style>
 <script>
-function applycheck()
-{
-	var n=document.getElementById("u1").value;
-	var p=document.getElementById("p1").value;
-	if(typeof(Storage)!=="undefined"){
-		if(n==localStorage.getItem("user1") && p==localStorage.getItem("pass1"))
-		{
-			alert("login successfull");
-			window.open("start.html");
+	function validateFunction(){
+	var username=document.getElementById("u1").value
+	var pass1=document.getElementById("p1").value
+	if(localStorage.getItem(username)==pass1){
+			document.getElementById("log").disabled=false;
 		}
-		else{
-			alert("login failed");
-		}
+		else {
+		alert("no support")
 	}
+		
 }
-
+</script>
 </form>
 </body>
 </html>

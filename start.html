@@ -1,30 +1,27 @@
 <html>
     
 <h1> <u> MATHS QUIZ </u></h1>
-<body onload="user12()">
-        <p id="u1">username</p><br>
+<body >
+        <p id="u1"></p>></p><br>
        <a href="gamelayout.html"><button type="button" class="Playbutton" onclick="myfunction()">Play</button></a><br>
        <a href="topscores1.html"><button type="button" class="TopScores">Top Scores</button></a>
 </body>
 <style>
-    #u1{
+    u1{
         text-align: right;
         font-size:20px;
-        margin-left:950px;
-        font-weight: bold;
     }
-    
     
     h1{
    text-align:center;
    font-size:60px;
    margin-top:40px;
-   margin-bottom:80px;
+   margin-bottom:120px;
 }
 
     .Playbutton
     {
-     margin-top:0.5px;
+     margin-top:30px;
     margin-bottom:80px;
      background-color:#F0FFFF;
 	border-radius:5px/5px;
@@ -38,11 +35,11 @@
 	text-align:center;
 	line-height:40px;
 	height:40px;
-    margin-left:505px;
+    margin-left:605px;
     margin-right:45px;
 }
     .TopScores{
-   margin-top:5px;
+   margin-top:80px;
    margin-top:30px;
     margin-bottom:80px;
      background-color:#F0FFFF;
@@ -57,19 +54,11 @@
 	text-align:center;
 	line-height:40px;
 	height:40px;
-    margin-left:505px;
+    margin-left:605px;
     margin-right:45px;
 }
 </style>
 <script>
-   function user12(){
-       if(localStorage.getItem("user1")==null){
-           alert("not logged in properly");
-           window.location="loginpage1.html";
-       }
-      else{
-          document.getElementById("u1").innerHTML=localStorage.getItem("user1");      }
-   }
    
 
 

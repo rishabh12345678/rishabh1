@@ -1,12 +1,12 @@
 <html>
 <body>
 <h2><u>Register</u></h2>
-<form id="Register" method="GET" action="loginpage1.html">
-Username:<br><input type="Username" id="user1" class="input" placeholder="Username" minlegth='7'><br>
-Password:<br><input type="Password" id="pass1" class="input" placeholder="Password" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,13})" ><br>
+<form id="Register" method="GET">
+Username:<br><input type="Username" class="input" placeholder="Username" minlegth='7'><br>
+Password:<br><input type="Password" id="pass1" class="input" placeholder="Password" minlegth='6' maxlength='13' ><br>
 Re-enter Password:<br><input type="Password" id="pass2" class="input" placeholder="Re-enter password" minlength='6' maxlength='13' ><br>
-<button class="Registerbutton" onclick="validate()">Register</button>
-<p> Already a User? <a href="loginpage1.html"> Login </a> </p>
+<button onclick="myFunction()" class="Registerbutton">Register</button>
+<p> Already a User? <a href="login.html"> Login </a> </p>
 <style>
 h2{
    text-align:center;
@@ -14,7 +14,7 @@ h2{
    margin-top:30px;
 }
 body{
-     background color: #663399;
+     background color:#663399;
      text-align:center;
      font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
@@ -54,26 +54,23 @@ body{
 	       
 }
 </style>
-
-</form>
 <script>
-function validate(){
-var n=document.getElementById("user1").value;
-var p=document.getElementById("pass1").value;
-var r=document.getElementById("pass2").value;
-if(typeof(Storage)!=="undefined")
+	window.localStorage.setItem("Username");
+	window.localStorage.setItem("Password");
+function myFunction(){
+var a = document.getElementById("pass1").value;
+var b = document.getElementById("pass2").value;
+if(a===b)
 {
-	if(p!=r){
-		alert("passwords should match");
-	}
-	else{
-		localStorage.setItem("user1",""+n);
-		localStorage.setItem("pass1",""+p);
-		alert("Registration successfull")
-	}
+alert("correct");
+}
+else
+{
+alert("wrong");
 }
 }
 </script>
+</form>
 </body>
 </html>
 
